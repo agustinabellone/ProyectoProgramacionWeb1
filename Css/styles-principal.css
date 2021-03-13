@@ -1,0 +1,687 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: white;
+    font-family: 'Jost', sans-serif;
+    max-width: 85em;
+    margin: 0 auto;
+}
+
+/*--Header--*/
+
+.contenedor {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    top: 0;
+    height: 4em;
+    background-color: white;
+}
+
+/*Logo*/
+
+.contenedor article .logo {
+    height: 5em;
+    width: 8em;
+}
+.contenedor article .logo img {
+    width: 40%;
+    margin-left: 2.5em;
+    margin-bottom:-0.5em;
+}
+.contenedor article .logo p {
+    color:black;
+    text-align: center;
+}
+.contenedor article .logo img:hover {
+    cursor: pointer;
+    padding: 0;    
+}
+
+/*Nav*/
+
+.contenedor article nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 1.2em 0.5em;
+    font-size: 1.3em;
+}
+.contenedor article nav ul li a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+.contenedor article nav ul li a:hover {
+    color: #e7553b;
+}
+
+.contenedor article nav ul li a::after {
+    content :'';
+    width: 0%;
+    height: 1px;
+    background-color:#e7553b;
+    position: absolute;
+    bottom: 0%;
+    left: 45%;
+    border-radius: 10px;
+    transition: all 500ms ease;
+  }
+.contenedor article nav ul li a:hover::after {
+    left: 0%;
+    width: 100%;
+}
+
+/*Buscador*/
+
+.contenedor article .buscador {
+    width: 20em;
+    margin: 1.1em 0;
+}
+.contenedor article .buscador input:focus{
+    outline: none ;
+    outline-width: 0;
+    box-shadow: none;
+}
+.contenedor article .buscador input {
+    height: 2.05em;
+    font-size: 1.2em;
+    width: 88%;
+    float: left;
+    padding-left: 0.5em;
+}
+
+/*Menu Responsive*/
+
+.menu_bar {
+    display: none;
+}
+
+
+/*----Main----*/
+
+/*Slider*/
+
+.slider {
+    margin-top: 1em;
+}
+.page_container {
+    margin: 50px auto;
+    max-width: 900px;
+}
+.immersive_slider .is-slide .content a {
+    color: white;
+    text-decoration: none;
+    font-size: 3em;
+ 
+
+}
+.immersive_slider .is-slide .content a:hover {
+    color: #ff7e67;
+  }
+  
+  .immersive_slider .is-slide .content p{
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-size: 1.1em;
+  }
+
+  .immersive_slider {
+    background: #006971ed;
+    max-width: 100%;
+    height: 480px;
+    opacity: 0.9;
+    position: relative;
+    overflow: hidden;
+  }
+  .immersive_slider .is-slide  {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 60px 70px;
+    position: absolute;
+  }
+  .immersive_slider .is-slide .image  {
+    float: none;
+    width: 80%;
+    padding-top: 3em;
+    padding-left: 2em;
+  }
+  .immersive_slider .is-slide .image img {
+      border-radius: 10px;
+  }
+  .is-bg-overflow {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  
+  .is-overflow, .is-bg-overflow {
+    height: 100%;
+  }
+  
+  .ease {
+    -webkit-transition: 1000ms ease all;
+    -moz-transition: 1000ms ease all;
+    -o-transition: 1000ms ease all;
+    transition: 1000ms ease all;
+  }
+  
+  .bounce {
+    -webkit-transition: 1000ms cubic-bezier(0.175, 0.885, 0.420, 1.310) all;
+    -moz-transition: 1000ms cubic-bezier(0.175, 0.885, 0.420, 1.310) all;
+    -o-transition: 1000ms cubic-bezier(0.175, 0.885, 0.420, 1.310) all;
+    transition: 1000ms cubic-bezier(0.175, 0.885, 0.420, 1.310) all;
+  }
+  
+  .no-animation {
+    -webkit-transition: none!important;
+    -moz-transition: none!important;
+    -o-transition: none!important;
+    transition: none !important;
+  }
+  
+  .immersive_slider .is-slide .image img{
+    max-width: 50em;
+    width: 100%;
+  }
+  
+  .immersive_slider .is-slide .content {
+    float: none;
+    width: 30%;
+    color: black;
+    text-align: left;
+  }
+  
+  
+  .is-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .is-container .is-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .is-container .is-background img{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    position: relative;
+  }
+  
+  .is-pagination {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .is-pagination li {
+    padding: 0;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+  }
+  .is-pagination li a{
+    padding: 1em;
+    width: 4px;
+    height: 4px;
+    display: block;
+    
+  }
+  .is-pagination li a:before{
+    content: '';
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    background: none;
+    border: 1px solid #ff7e67;
+    border-radius: 10px;
+  }
+  
+  .is-pagination li a.active:before{
+    width: 1em;
+    height: 1em;
+    background: none;
+    background:#e7553b;
+    border: 1px solid #e7553b;
+  }
+  
+  .is-next,  .is-prev {
+    padding:0.2em;
+    font-size: 50px;
+    position: absolute;
+    bottom: 50%;
+    margin-bottom: -36px;
+    width: 45px;
+    height: 50px;
+    color: #e7553b;
+    display: inline-block;
+    line-height: 40%;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.068);
+  }
+  
+  .is-next {
+    right: 5px;
+  }
+  
+  .is-prev {
+    left: 5px;
+  }
+
+/*Enlaces a Otras Paginas*/
+
+main .paginas {
+    height: 25em;
+}
+main .paginas h2{
+    text-align: center;
+    margin: 2em 0;
+    font-size: 2em;
+}
+main .paginas .enlaces{
+    display: flex;
+    justify-content: space-around;  
+}
+main .paginas .enlaces article {
+   text-align: center;
+}
+main .paginas .enlaces article:hover {
+    cursor: pointer;
+}
+main .paginas .enlaces .imagen {
+    background-color: #006971;
+    border-radius: 50%;
+    height: 13em;
+    width: 13em;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+main .paginas .enlaces .imagen img {
+    width: 20em;   
+}
+main .paginas .enlaces .imagen img:hover {
+    transform:none;
+} 
+main .paginas .enlaces article h3{
+    margin: 0.5em 0;
+    font-size: 1.5em;
+}
+main .paginas .enlaces article h3 a{
+    text-decoration: none;
+    color: black;
+}
+main .paginas .enlaces article h3 a:hover {
+    color: #fa5436;
+}
+
+/*Informacion Sintomas-Telefono*/
+
+main .informacion {
+    height: 12em;
+    display: flex;
+    justify-content: space-around;
+    background-color:  #ecf4f3;
+}
+main .informacion article {
+    width: 50%;
+    text-align: center;
+}
+main .informacion .texto-sintomas {
+    font-size: 2.2em;
+    margin: 1em 1em;
+    text-align: center;
+ 
+}
+main .informacion .texto-sintomas .llama {
+    font-size: 2em ;
+    color: #e7553b;
+    
+}
+main .informacion .numero-telefono {
+    font-size: 9em;
+    color: #e7553b;
+}
+main .informacion .numero-telefono img {
+    width: 0.6em;
+}
+main .informacion .numero-telefono img:hover {
+    cursor: pointer;
+}
+
+/*----Footer----*/
+
+footer {
+    display: flex;
+    height: 3em;
+    justify-content: center;
+    color: black;
+    background-color: #ecf4f3;
+
+}
+
+
+/*Redes*/
+
+footer .footer-texto {
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 1em;
+}
+footer .redes .iconos-footer {
+    display: flex;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+footer .redes .iconos-footer p a i {
+    font-size: 1.5em;
+    padding: 0 0.3em;
+    color: black;  
+    
+}
+footer .redes .iconos-footer p a i:hover {
+    cursor: pointer;
+    color: #e93111;
+}
+
+
+/*MEDIA QUERIES: iPad, Tablet...*/
+
+@media (max-width:1024px){
+    body {
+        max-width: none;
+    }
+    main {
+        margin-top: 4em;
+    }
+    
+    /*----Header----*/ 
+    .contenedor {
+        display:block;
+        position: fixed;
+        z-index: 9999;
+        background-color: #006a71;
+    }
+    .contenedor article .logo,
+    .contenedor article .buscador input {
+        display: none;
+    }
+  
+    .contenedor article nav{
+        width: 60vw;
+        height: 100vh;
+        text-align: center;
+        position: absolute; /*Ver*/
+        background-color: #006a71;   
+        margin-left: -100% ;
+
+    } 
+    
+    .contenedor article nav ul li{
+        display: block;
+        font-size: 1.5em;
+        margin: 3em 1em;
+
+    }
+    .contenedor article nav ul li a{
+        font-size: 1em;
+        color:white;
+    }
+    .contenedor article nav ul li a:hover {
+        color: white;
+    }
+    .contenedor article nav ul li a::after {
+        background-color: white;
+    }
+
+    /*Menu Responsive*/
+    
+    .menu_bar {
+        display: block;  
+        height: 3em;   
+    }
+  
+    .menu_bar span a img {
+        width: 1.8em;
+        margin: -0.2em 0.4em;
+    }
+
+    .menu_bar .bt-menu {
+        display: inline-block;
+        padding: 0.6em;
+        height: 100%;         
+        color: white;
+        width: 100%;
+        text-decoration: none;
+        font-size: 1.4em;
+        
+    }
+    .menu_bar .bt-menu i {
+        float: right;
+       
+        font-size: 1.5em;
+    }
+   
+    
+
+    /*----Main----*/
+
+    /*Slider*/ 
+    .slider {
+        height: 20em;
+    }
+    .page_container {
+        margin: 0 auto;
+        max-width: 700px;
+     }
+ 
+    .immersive_slider .is-slide .content p{
+        font-size: 1em;
+    }
+    .immersive_slider {
+        height: 300px;
+    }
+    .immersive_slider .is-slide  {
+        padding: 20px 50px;
+    }
+    .immersive_slider .is-slide .image  {
+        float: none;
+        width: 60%;
+        padding-top: 3em;
+        padding-left: 2em;
+    }
+      
+    .immersive_slider .is-slide .image img{
+        max-width: 40em;
+        width: 100%;
+    }
+      
+    .immersive_slider .is-slide .content {
+        width: 40%;
+    }
+    .is-pagination li a:before{
+        width: 0.8em;
+        height: 0.8em;
+    }
+      
+    .is-pagination li a.active:before{
+        width: 0.8em;
+        height: 0.8em;
+     }
+      
+    .is-next,  .is-prev {
+        padding:0.2em;
+        font-size: 40px;
+        width: 36px;
+        height: 40px;
+     }
+
+    /*Informate con nosotros*/
+    main .paginas .enlaces .imagen img{
+        height: 100%;
+        width: 100%;
+    }
+
+    /*Informacion Sintomas - Telefono*/
+
+    main .informacion {
+        margin-top: 1em;
+        height: 8em;
+    }
+    main .paginas h2{
+        margin: 1.2em 0;
+    }
+    main .informacion article {
+        width: 100%;
+    }
+    main .informacion .texto-sintomas {
+        font-size: 1.5em;
+       
+    }
+    main .informacion .texto-sintomas .llama {
+        font-size: 1.8em;
+    }
+    main .informacion .numero-telefono {
+        font-size: 6em;
+    }
+
+    /*footer*/
+
+    footer .footer-texto {
+        font-size: 0.9em;
+        margin-top: 1.7em;
+    }
+    footer .redes .iconos-footer {
+        margin-top: 1.3em;
+    }
+}
+/*MEDIA QUERIES: Blackberry, MotoG4...*/
+
+@media (min-width:300px) and (max-width:700px){
+    .contenedor article nav {
+        width: 70vw;
+    }
+    
+    /*Slider*/ 
+    .slider {
+        height: 90vh;
+    }
+   
+    .page_container {
+        margin: 20px auto;
+        max-width: 500px;
+    }
+    
+    .immersive_slider .is-slide .content p{
+        padding: 0.5em 0 0;
+        font-size: 1.1em;
+      }
+      .immersive_slider .slide {
+          display: flex;
+          flex-direction: column;
+      }
+      .immersive_slider {
+        height: 500px;
+      }
+      .immersive_slider .is-slide  {
+        padding: 10px 60px;
+      }
+      .immersive_slider .is-slide .image  {
+        width: 100%;
+        padding: 1em;
+      }
+     
+      .immersive_slider .is-slide .content {
+        width: 100%;
+      }
+    
+
+    /*Enlaces a Otras Paginas*/
+
+    main .paginas {
+        height: 64em;
+    }
+    main .paginas h2{
+        font-size: 1.7em;
+    }
+    main .paginas .enlaces{
+   
+        flex-direction: column;
+        align-items: center;  
+    }
+    main .paginas .enlaces article h3 a{
+        font-size: 1em;
+    }
+    main .paginas .enlaces .imagen {
+        height: 15em;
+        width: 15em;
+    }
+    main .paginas .enlaces .imagen img {
+        height: 15em;
+        width: 16em;
+    }
+  
+
+    /*Informacion Sintomas - Telefono*/
+
+    main .informacion {
+        height: 11em;
+        flex-direction: column;  
+        align-items: center;
+        justify-content: space-around;
+ 
+    }
+    main .informacion article {
+        width: 100%;
+    }
+    main .informacion .texto-sintomas {
+        font-size: 1.4em;
+        margin-bottom: -10px;
+    }
+    main .informacion .texto-sintomas .llama {
+        font-size: 1.7em;
+    }
+    main .informacion .numero-telefono {
+        font-size: 4.5em;
+    }
+
+    /*----Footer----*/
+
+    footer {
+        height: 6em;
+        flex-direction: column-reverse;
+   
+    }
+    footer article {
+        width: 100%;
+    }
+    /*Redes*/
+    footer {
+        justify-content: space-between;
+    }
+    footer .redes .iconos-footer {
+        justify-content: center;
+    }
+    footer .redes .iconos-footer p a i {
+        font-size: 2.5em;
+        margin: 0;
+    } 
+    footer .footer-texto{
+        margin: 0;
+    }
+   
+}
+
